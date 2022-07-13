@@ -1,0 +1,29 @@
+{
+  "name": "insert-between-markers",
+  "version": "0.0.1",
+  "description": "This action inserts `insertion` between the `begin-marker` and `end-marker` in `target` file.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build -m index.js -o dist",
+    "format": "prettier --write *.js"
+  },
+  "keywords": [
+    "actions"
+  ],
+  "author": "Sebastian Kunze",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunzese/insert-between-markers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kunzese/insert-between-markers/issues"
+  },
+  "homepage": "https://github.com/kunzese/insert-between-markers",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.9.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}

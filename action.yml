@@ -1,0 +1,38 @@
+name: Insert Between Markers
+author: Sebastian Kunze
+description: This action inserts `insertion` between the `begin-marker` and `end-marker` in `target` file.
+
+inputs:
+  target:
+    description: The name of the target file.
+    required: false
+    default: README.md
+
+  encoding:
+    description: The encoding of the target file.
+    required: false
+    default: utf8
+
+  begin-marker:
+    description: The format of the begin marker.
+    required: true
+
+  end-marker:
+    description: The format of the end marker.
+    requried: true
+
+  insertion:
+    description: The text which will be inserted between the begin and end marker.
+    required: true
+
+outputs:
+  changed:
+    description: Determines wheter this action changed the target file (`true`) or not (`false`).
+
+branding:
+  icon: file-plus
+  color: gray-dark
+
+runs:
+  using: node16
+  main: dist/index.js
