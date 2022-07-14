@@ -1,7 +1,7 @@
 {
   "name": "insert-between-markers",
-  "version": "0.0.1",
-  "description": "This action inserts `insertion` between the `begin-marker` and `end-marker` in `target` file.",
+  "version": "0.0.2",
+  "description": "This action inserts `input` between the `begin-marker` and `end-marker` in `target` file.",
   "main": "index.js",
   "scripts": {
     "build": "ncc build -m index.js -o dist",

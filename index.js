@@ -5,9 +5,17 @@ const run = () => {
   try {
     const target = core.getInput('target');
     const encoding = core.getInput('encoding');
-    const insertion = core.getInput('insertion', { required: true });
     const beginMarker = core.getInput('begin-marker', { required: true });
     const endMarker = core.getInput('end-marker', { required: true });
+    const input = core.getInput('input', { required: true });
+    const inputType = core.getInput('input-type');
+
+    let insertion = input;
+
+    if (inputType == 'file') {
+      const buffer = fs.readFileSync(input);
+      insertion = buffer.toString();
+    }
 
     const content = fs.readFileSync(target, encoding);
 
