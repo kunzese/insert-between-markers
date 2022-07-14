@@ -1,6 +1,6 @@
 name: Insert Between Markers
 author: Sebastian Kunze
-description: This action inserts `insertion` between the `begin-marker` and `end-marker` in `target` file.
+description: This action inserts `input` between the `begin-marker` and `end-marker` in `target` file.
 
 inputs:
   target:
@@ -21,9 +21,14 @@ inputs:
     description: The format of the end marker.
     requried: true
 
-  insertion:
-    description: The text which will be inserted between the begin and end marker.
+  input:
+    description: The text which will be inserted between the begin and end marker or a file path. If `input-type` is set to `file`, `input` is expected to be a file from which the content is read.
     required: true
+
+  input-type:
+    description: If `input-type` is set to `file`, `input` is expected to be a file from which the content is read. Defaults to `text`.
+    required: false
+    default: text
 
 outputs:
   changed:
